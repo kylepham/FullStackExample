@@ -46,7 +46,7 @@ function App() {
                             {!authState.status ? (
                                 <>
                                     <Link to="/login">Login</Link>
-                                    <Link to="/Profile">Register</Link>
+                                    <Link to="/register">Register</Link>
                                 </>
                             ) : (
                                 <>
