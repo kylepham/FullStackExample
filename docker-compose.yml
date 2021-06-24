@@ -1,0 +1,43 @@
+version: "3"
+
+services: 
+  react-app:
+    image: react-app
+    stdin_open: true
+    ports:
+      - 3000:3000
+    networks: 
+      - net_app
+
+  api-server:
+    image: api-server
+    ports: 
+      - 5000:5000
+    depends_on: 
+      - mysql
+    environment: 
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: fullstack
+    networks: 
+      - net_app
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 27017:3306
+    volumes: 
+      - ./fullstack-database:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: fullstack
+    networks: 
+      - net_app
+
+networks:
+  net_app:
+    driver: bridge
+
+volumes:
+  fullstack-database:
+
