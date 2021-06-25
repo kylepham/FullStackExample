@@ -1,4 +1,4 @@
-Followed thru this [Youtube](https://www.youtube.com/watch?v=Hl7diL7SFw8&list=RDCMUC8S4rDRZn6Z_StJ-hh7ph8g&index=3) video
+Followed thru this [Youtube series](https://www.youtube.com/watch?v=Hl7diL7SFw8&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL)
 
 ## Technologies Used
 - React.js
@@ -12,3 +12,6 @@ Followed thru this [Youtube](https://www.youtube.com/watch?v=Hl7diL7SFw8&list=RD
 - <code>cd FullStackExample</code>
 - <code>make setup</code> 
     - Run <code>make cleanup</code> to stop.
+
+## Bug(s)
+- [ ] App crashes when clicking <b>Login</b> with an unregistered identity twice.
